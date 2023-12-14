@@ -52,8 +52,7 @@ class ImagePickerFragment : Fragment() {
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU ->
                 arrayOf(Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_VIDEO)
 
-            Build.VERSION.SDK_INT < Build.VERSION_CODES.Q
-                || Environment.isExternalStorageLegacy() -> arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.Q -> arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
 
             else -> arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
         }
